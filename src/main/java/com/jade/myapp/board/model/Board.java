@@ -16,6 +16,8 @@ public class Board {
 	private Timestamp writeDate;
 	private int masterId;
 	private int readCount;
+	private int replyNumber;
+
 	private int replyStep;
 	private int seq;
 	private int page;
@@ -141,15 +143,22 @@ public class Board {
 	public void setFileContentType(String fileContentType) {
 		this.fileContentType = fileContentType;
 	}
-	
+	public int getReplyNumber() {
+		return replyNumber;
+	}
+	public void setReplyNumber(int replyNumber) {
+		this.replyNumber = replyNumber;
+	}
 	@Override
 	public String toString() {
 		return "Board [boardId=" + boardId + ", categoryId=" + categoryId + ", writer=" + writer + ", email=" + email
 				+ ", password=" + password + ", title=" + title + ", content=" + content + ", writeDate=" + writeDate
-				+ ", masterId=" + masterId + ", readCount=" + readCount + ", replyStep=" + replyStep + ", seq=" + seq
-				+ ", page=" + page + ", category=" + category + ", file=" + file + ", fileId=" + fileId + ", fileName="
-				+ fileName + ", fileSize=" + fileSize + ", fileContentType=" + fileContentType + "]";
+				+ ", masterId=" + masterId + ", readCount=" + readCount + ", replyNumber=" + replyNumber
+				+ ", replyStep=" + replyStep + ", seq=" + seq + ", page=" + page + ", category=" + category + ", file="
+				+ file + ", fileId=" + fileId + ", fileName=" + fileName + ", fileSize=" + fileSize
+				+ ", fileContentType=" + fileContentType + "]";
 	}
+
 	
 	
 	

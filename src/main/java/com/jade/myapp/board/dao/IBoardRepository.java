@@ -21,7 +21,7 @@ public interface IBoardRepository {
 	BoardUploadFile getFile(int fileId);
 	
 	void updateReadCount(int boardId);
-	void updateReplyNumber(@Param("masterId")int masterId);
+	void updateReplyNumber(@Param("masterId")int masterId, @Param("replyNumber") int replyNumber);
 	void replyArticle(Board board);
 	
 	String getPassword(int boardId);
@@ -36,7 +36,8 @@ public interface IBoardRepository {
 	
 	int selectTotalArticleCount();
 	int selectTotalArticleCountByCategoryId(int categoryId);
-	List<Board> searchListByContentKeyword(String keyword);
+	int selectTotalArticleCountByKeyword(String keyword);
+	List<Board> searchListByContentKeyword(@Param("keyword") String keyword, @Param("start") int start, @Param("end") int end);
 	
 	
 }
