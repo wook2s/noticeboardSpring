@@ -8,10 +8,10 @@
 			SELECT 
 				BOARD_ID		AS		"boardId",
 				CATEGORY_ID		AS		"categoryId",
-				WRITER_ID		AS	 	"writer",
+				WRITER			AS	 	"writer",
 				EMAIL			AS		"email",
 				TITLE			AS		"title",
-				WRITER_DATE		AS		"writerDate",
+				WRITE_DATE		AS		"writeDate",
 				MASTER_ID		AS		"masterId",
 				REPLY_NUMBER	AS		"replyNumber",
 				REPLY_STEP		AS		"replyStep",
@@ -36,10 +36,10 @@
 			SELECT
 				BOARD.BOARD_ID			AS	"boardId",
 				CATEGORY_ID				AS		"categoryId",
-				WRITER_ID				AS	 	"writer",
+				WRITER					AS	 	"writer",
 				EMAIL					AS		"email",
 				TITLE					AS		"title",
-				WRITER_DATE				AS		"writerDate",
+				WRITE_DATE				AS		"writeDate",
 				MASTER_ID				AS		"masterId",
 				REPLY_NUMBER			AS		"replyNumber",
 				REPLY_STEP				AS		"replyStep",
@@ -79,7 +79,7 @@
 	<insert id="insertArticle" parameterType="com.jade.myapp.board.model.Board">
 		<![CDATA[
 			INSERT INTO BOARD
-				(BOARD_ID, CATEGORY_ID, WRITER, EMAIL, PASSWORD, TITLE, CONTENT, WRITER_DATE, MASTER_ID,
+				(BOARD_ID, CATEGORY_ID, WRITER, EMAIL, PASSWORD, TITLE, CONTENT, WRITE_DATE, MASTER_ID,
 				 REPLY_NUMBER, REPLY_STEP)
 			VALUES
 				(#{boardId},#{categoryId},#{writer},#{email},#{password},#{title},
@@ -124,7 +124,7 @@
 		<![CDATA[
 			INSERT INTO
 			BOARD
-				(BOARD_ID, CATEGORY_ID, WRITER_ID, EMAIL, PASSWORD, TITLE, CONTENT, WRITE_DATE, MASTER_ID, 
+				(BOARD_ID, CATEGORY_ID, WRITER, EMAIL, PASSWORD, TITLE, CONTENT, WRITE_DATE, MASTER_ID, 
 				 REPLY_NUMBER, REPLY_SETP)
 				VALUES
 				(#{boardId},#{categoryId},#{writer},#{email},#{password},#{title},#{content},
